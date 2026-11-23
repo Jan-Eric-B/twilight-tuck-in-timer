@@ -2,25 +2,23 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net11.0-windows7.0</TargetFramework>
+    <TargetFramework>net11.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
-    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
-	<IncludeAllContentForSelfExtract>true</IncludeAllContentForSelfExtract>
-	<ApplicationIcon>Assets\favicon.ico</ApplicationIcon>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <WarningLevel>7</WarningLevel>
+    <ApplicationIcon>Assets\favicon.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <WarningLevel>7</WarningLevel>
+  <PropertyGroup>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <SelfContained>true</SelfContained>
+    <PublishSingleFile>true</PublishSingleFile>
+    <IncludeAllContentForSelfExtract>true</IncludeAllContentForSelfExtract>
+    <NoWarn>$(NoWarn);NETSDK1244</NoWarn>
+    <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+    <DebugType>embedded</DebugType>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Content Include="Assets\favicon.ico" />
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="WPF-UI" Version="4.3.0" />
@@ -28,21 +26,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="Assets\favicon.ico" />
     <None Remove="Assets\lindi.gif" />
-    <None Remove="Assets\moon.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Resource Include="Assets\favicon.ico">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Assets\lindi.gif">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Assets\moon.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
+    <Resource Include="Assets\lindi.gif" />
   </ItemGroup>
 
   <ItemGroup>
@@ -51,9 +36,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
     <None Update="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
