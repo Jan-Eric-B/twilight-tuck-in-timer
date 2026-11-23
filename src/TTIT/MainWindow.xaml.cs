@@ -19,8 +19,8 @@ namespace TTIT
             this.Closing += MainWindow_Closing;
 
             // Load settings
-            HoursBox.Text = Properties.Settings.Default.Hours.ToString();
-            MinutesBox.Text = Properties.Settings.Default.Minutes.ToString();
+            HoursBox.Value = Properties.Settings.Default.Hours;
+            MinutesBox.Value = Properties.Settings.Default.Minutes;
         }
 
 
