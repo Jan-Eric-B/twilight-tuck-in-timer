@@ -33,7 +33,7 @@ namespace TTIT
             await CancelShutdownAsync();
         }
 
-        private void MainWindow_Closing(object sender, CancelEventArgs e)
+        private void MainWindow_Closing(object? sender, CancelEventArgs e)
         {
             Properties.Settings.Default.Hours = int.TryParse(HoursBox.Text, out int hours) ? hours : 0;
             Properties.Settings.Default.Minutes = int.TryParse(MinutesBox.Text, out int minutes) ? minutes : 0;
@@ -87,6 +87,7 @@ namespace TTIT
             }
         }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Minor Code Smell", "S2325:Methods and properties that don't access instance data should be static", Justification = "XAML event handlers are wired via an instance reference.")]
         private void TitleBar_HelpClicked(Wpf.Ui.Controls.TitleBar sender, RoutedEventArgs args)
         {
             HelpWindow gifWindow = new();
