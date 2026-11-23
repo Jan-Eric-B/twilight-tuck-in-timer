@@ -23,7 +23,26 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <ui:TitleBar Background="#2b2b2b" Height="auto" Title="Twilight Tuck-In Timer" Grid.Row="0" ApplicationTheme="Dark" CanMaximize="false" ShowClose="True" ShowMinimize="True" ShowMaximize="False" ShowHelp="True" HelpClicked="TitleBar_HelpClicked"/>
+        <ui:TitleBar
+            Title="Twilight Tuck-In Timer"
+            Grid.Row="0"
+            Height="auto"
+            Padding="8,4,8,4"
+            ApplicationTheme="Dark"
+            Background="#2b2b2b"
+            CanMaximize="false"
+            HelpClicked="TitleBar_HelpClicked"
+            ShowClose="True"
+            ShowHelp="True"
+            ShowMaximize="False"
+            ShowMinimize="True">
+            <ui:TitleBar.Icon>
+                <ui:ImageIcon
+                    Width="16"
+                    Height="16"
+                    Source="pack://application:,,,/Assets/moon.png" />
+            </ui:TitleBar.Icon>
+        </ui:TitleBar>
 
         <Grid Grid.Row="1" Margin="10">
             <Grid.RowDefinitions>

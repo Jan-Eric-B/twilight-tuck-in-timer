@@ -28,6 +28,8 @@
   <ItemGroup>
     <None Remove="Assets\lindi.gif" />
     <Resource Include="Assets\lindi.gif" />
+    <None Remove="Assets\moon.png" />
+    <Resource Include="Assets\moon.png" />
   </ItemGroup>
 
   <ItemGroup>
