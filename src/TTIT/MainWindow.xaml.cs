@@ -23,8 +23,6 @@ namespace TTIT
             MinutesBox.Value = Properties.Settings.Default.Minutes;
         }
 
-
-
         private async void OnScheduleShutdownClick(object sender, RoutedEventArgs e)
         {
             await StartShutdownAsync();
@@ -66,7 +64,6 @@ namespace TTIT
             await SendCommandAsync(shutdownCmd);
         }
 
-
         /// <summary>
         /// Cancel scheduled shutdown.
         /// </summary>
@@ -84,12 +81,11 @@ namespace TTIT
             };
             using Process? process = Process.Start(processStartInfo);
 
-            if(process != null)
+            if (process != null)
             {
                 await process.WaitForExitAsync();
             }
         }
-
 
         private void TitleBar_HelpClicked(Wpf.Ui.Controls.TitleBar sender, RoutedEventArgs args)
         {
@@ -97,5 +93,4 @@ namespace TTIT
             gifWindow.Show();
         }
     }
-
 }
