@@ -1,13 +1,18 @@
 # <img src="docs/images/AppIcon.png" width="30" height="30" alt="Twilight Tuck-In Timer icon"> Twilight Tuck-In Timer
 
-A tiny Windows app for setting a sleep timer. Set a time when the PC should shutdown. 
+[![Latest release](https://img.shields.io/github/v/release/Jan-Eric-B/twilight-tuck-in-timer)](https://github.com/Jan-Eric-B/twilight-tuck-in-timer/releases/latest)
+[![License](https://img.shields.io/github/license/Jan-Eric-B/twilight-tuck-in-timer)](LICENSE)
+[![.NET 11](https://img.shields.io/badge/.NET-11-512BD4)](https://dotnet.microsoft.com/download/dotnet/11.0)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://paypal.me/JanEricBe)
 
-Originally made for my gf, who likes to have something play in the background on the PC while trying to sleep.
+A tiny Windows app for setting a sleep timer. Set a time when the PC should shut down.
+
+Originally made for my girlfriend, who likes to have something play in the background on the PC while trying to sleep.
 
 <img src="docs/images/Showcase_MainWindow.png" alt="Twilight Tuck-In Timer - Main window">
 
 Built with WPF, .NET 11 and [WPF UI](https://github.com/lepoco/wpfui). 
-It uses the built-in Windows `shutdown` command and it can be cancelled in the app aswell.
+It uses the built-in Windows `shutdown` command and it can be cancelled in the app as well.
 
 ## Features
 
@@ -45,8 +50,8 @@ Scheduling a new timer replaces any shutdown that was already scheduled.
 - [.NET 11 SDK](https://dotnet.microsoft.com/download/dotnet/11.0)
 
 ```bash
-git clone https://github.com/Jan-Eric-B/Twilight-Tuck-In-Timer.git
-cd Twilight-Tuck-In-Timer
+git clone https://github.com/Jan-Eric-B/twilight-tuck-in-timer.git
+cd twilight-tuck-in-timer
 dotnet publish src/TTIT/TTIT.csproj -c Release -o publish
 ```
 
